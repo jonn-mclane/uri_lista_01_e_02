@@ -2,19 +2,35 @@ package lista_03;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+/**
+ * IMPORTANT:
+ *      O nome da classe deve ser "Main" para que a sua solução execute
+ *      Class name must be "Main" for your solution to execute
+ *      El nombre de la clase debe ser "Main" para que su solución ejecutar
+ */
 public class exercicio_1020 {
 
     public static void main(String[] args) throws IOException {
-
         Scanner sc = new Scanner(System.in);
+        int a = 0;
+        int m = 0;
+        int d = sc.nextInt();
 
-        double co = sc.nextDouble(), nm = sc.nextDouble(), vu = sc.nextDouble();
-        double co2 = sc.nextDouble(), nm2 = sc.nextDouble(), vu2 = sc.nextFloat();
+        while (d != 0) {
+            if (d >= 365) {
+                a = (d / 365);
+                d = d % 365;
+            }
+            else if (d < 365 && d >= 30) {
+                m = d / 30;
+                d = d % 30;
+            }
+            else {
+                break;
+            }
 
-        double valor = nm * vu + nm2 * vu2;
-
-        System.out.println("VALOR A PAGAR: R$ " + String.format("%.2f", valor));
+        }
+        System.out.println(a + " ano(s)\n" + m + " mes(es)\n" + d + " dia(s)");
 
     }
 }

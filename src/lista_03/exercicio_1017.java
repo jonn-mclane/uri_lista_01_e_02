@@ -7,17 +7,15 @@ public class exercicio_1017 {
 
     public static void main(String[] args) throws IOException {
 
+
         Scanner sc = new Scanner(System.in);
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-        int d = sc.nextInt();
-
-        int prod1 = a * b;
-        int prod2 = c * d;
-
-        System.out.println("DIFERENCA = " + (prod1 - prod2));
+        float tempo = sc.nextInt();
+        float vmedia = sc.nextInt();
+        float dist = tempo * vmedia;
+        float kmh = dist / 12;
+        System.out.println(String.format("%.3f", kmh));
 
     }
+
 }
